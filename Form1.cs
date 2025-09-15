@@ -17,6 +17,9 @@ namespace LoginForm
         public Form1()
         {
             InitializeComponent();
+
+
+            Application.Run(new LoginForm());
         }
         public string ConnectionString = "Server=localhost;Database=OEAMS;Uid=root;pwd=1234567890";
 

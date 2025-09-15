@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginForm", "LoginForm.csproj", "{A41D487B-68EE-4710-A5A5-D7C938A1DD9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrightTest", "BrightTest.csproj", "{A41D487B-68EE-4710-A5A5-D7C938A1DD9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
