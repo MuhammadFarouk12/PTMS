@@ -1,12 +1,4 @@
 -- -----------------------------------------------------
--- Database: Education System
--- -----------------------------------------------------
--- Drop database if exists (optional)
--- DROP DATABASE IF EXISTS education_system;
--- CREATE DATABASE education_system;
--- USE education_system;
-
--- -----------------------------------------------------
 -- Table: Student
 -- -----------------------------------------------------
 CREATE TABLE Student (
@@ -89,7 +81,11 @@ CREATE TABLE Examination (
 );
 
 -- -----------------------------------------------------
+-- Edits:
+-- -----------------------------------------------------
+alter table Student add column phone_number varchar(9);
+alter table Student add column password varchar(25);
 -- End of File
 -- -----------------------------------------------------
 -- You can now import this file into MySQL using:
--- mysql -u username -p database_name < schema.sql
+-- mysql -u username -p database_name < DB.sql
