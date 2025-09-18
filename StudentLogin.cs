@@ -36,7 +36,7 @@ namespace LoginForm
                     object result = checkPass.ExecuteScalar();
                     return result != null && result.ToString() == password;
 
-                    //This condition check if the student is stored it opened another form 
+                    // This condition check if the student is stored it opened another form 
                     if (result != null && result.ToString() == password)
                     {
                         Form1 form1 = new Form1();
@@ -146,6 +146,11 @@ namespace LoginForm
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txb_phone_number_TextChanged_1(object sender, EventArgs e)
         {
 
         }
