@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Common;
+using Org.BouncyCastle.Tls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,31 +25,7 @@ namespace LoginForm
             this.BackColor = ColorTranslator.FromHtml("#E0E0E0");
 
         }
-        public string ConnectionString = "Server=localhost;Database=OEAMS;Uid=root;pwd=1234567890";
-        public bool CheckPassword(int id, string password)
-        {
-            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
-            {
-                using (MySqlCommand checkPass = new MySqlCommand("select password from student where std_id = @std_id", connection))
-                {
-                    checkPass.Parameters.AddWithValue("@std_id", id);
-                    connection.Open();
-                    object result = checkPass.ExecuteScalar();
-                    return result != null && result.ToString() == password;
-
-                    // This condition check if the student is stored it opened another form 
-                    if (result != null && result.ToString() == password)
-                    {
-                        Form1 form1 = new Form1();
-                        form1.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid ID or password.");
-                    }
-                }
-            }
-        }
+        public string ConnectionString = "Server=localhost;Database=OEAMS;Uid=root;pwd=Hamed#51234";        
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -147,6 +124,39 @@ namespace LoginForm
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+                {
+                    using (MySqlCommand checkPass = new MySqlCommand("select * from student where phone_number = @phone_number", connection))
+                    {
+                        checkPass.Parameters.AddWithValue("@phone_number", txb_phone_number.Text);
+                        connection.Open();
+                        MySqlDataReader result = checkPass.ExecuteReader();
+                        User user = new User();
+                        result.Read();
+                        user.Id = result.GetInt32("std_id");
+                        user.First_Name = result.GetString("first_name");
+                        user.Last_Name = result.GetString("last_name");
+                        user.Phone_Number = result.GetString("phone_number");
+                        user.Password  = result.GetString("password");
+
+                        if(txtbPassword.Text == user.Password)
+                        {
+                            Test test = new Test();
+                            test.Show();
+                            this.Hide();
+                        } else
+                        {
+                            MessageBox.Show("Your Password Is Incorrect");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Incorrect Phone Number");
+            }
 
         }
 

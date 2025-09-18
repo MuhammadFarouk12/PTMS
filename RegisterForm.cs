@@ -22,7 +22,7 @@ namespace LoginForm
             guna2Panel2.BackColor = ColorTranslator.FromHtml("#E6F0F9");
             this.BackColor = ColorTranslator.FromHtml("#E0E0E0");
         }
-        public string ConnectionString = "Server=localhost;Database=OEAMS;Uid=root;pwd=1234";
+        public string ConnectionString = "Server=localhost;Database=OEAMS;Uid=root;pwd=Hamed#51234";
 
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
