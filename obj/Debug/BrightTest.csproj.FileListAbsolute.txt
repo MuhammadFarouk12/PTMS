@@ -38,7 +38,6 @@ C:\Users\VICTUS\source\repos\PTMS\bin\Debug\System.Threading.Tasks.Extensions.xm
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\BrightTest.csproj.AssemblyReference.cache
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.exe.config
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.Form1.resources
-C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.LoginForm.resources
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.Properties.Resources.resources
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.RegisterForm.resources
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\BrightTest.csproj.GenerateResource.cache
@@ -46,3 +45,5 @@ C:\Users\VICTUS\source\repos\PTMS\obj\Debug\BrightTest.csproj.CoreCompileInputs.
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\BrightTest.csproj.Up2Date
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.exe
 C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.pdb
+C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.WelcomeForm.resources
+C:\Users\VICTUS\source\repos\PTMS\obj\Debug\LoginForm.StudentLogin.resources
