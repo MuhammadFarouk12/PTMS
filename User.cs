@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LoginForm
 {
-    public class User
+    public static class User
     {
-        public int Id { get; set; }
-        public string First_Name { get; set; }
-        public string Last_Name { get; set; }
-        public string Password { get; set; }
-        public string Phone_Number { get; set; }
+        public static int Id { get; set; }
+        public static string First_Name { get; set; }
+        public static string Last_Name { get; set; }
+        public static string Password { get; set; }
+        public static string Phone_Number { get; set; }
 
     }
 }

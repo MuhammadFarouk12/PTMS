@@ -25,7 +25,7 @@ namespace LoginForm
             this.BackColor = ColorTranslator.FromHtml("#E0E0E0");
 
         }
-        public string ConnectionString = "Server=localhost;Database=OEAMS;Uid=root;pwd=Hamed#51234";        
+        public string ConnectionString =  "Server=localhost;Database=OEAMS;Uid=root;pwd=1234567890";        
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -133,15 +133,15 @@ namespace LoginForm
                         checkPass.Parameters.AddWithValue("@phone_number", txb_phone_number.Text);
                         connection.Open();
                         MySqlDataReader result = checkPass.ExecuteReader();
-                        User user = new User();
+                        //User user = new User();
                         result.Read();
-                        user.Id = result.GetInt32("std_id");
-                        user.First_Name = result.GetString("first_name");
-                        user.Last_Name = result.GetString("last_name");
-                        user.Phone_Number = result.GetString("phone_number");
-                        user.Password  = result.GetString("password");
+                        User.Id = result.GetInt32("std_id");
+                        User.First_Name = result.GetString("first_name");
+                        User.Last_Name = result.GetString("last_name");
+                        User.Phone_Number = result.GetString("phone_number");
+                        User.Password  = result.GetString("password");
 
-                        if(txtbPassword.Text == user.Password)
+                        if(txtbPassword.Text == User.Password)
                         {
                             Test test = new Test();
                             test.Show();

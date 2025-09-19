@@ -16,5 +16,10 @@ namespace LoginForm
         {
             InitializeComponent();
         }
+
+        private void Test_Load(object sender, EventArgs e)
+        {
+            helloTestLbael.Text = "Hello " + User.First_Name + " " + User.Last_Name + ", Answer all questions";
+        }
     }
 }

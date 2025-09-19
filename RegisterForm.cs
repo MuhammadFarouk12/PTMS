@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace LoginForm
 {
@@ -22,7 +23,7 @@ namespace LoginForm
             guna2Panel2.BackColor = ColorTranslator.FromHtml("#E6F0F9");
             this.BackColor = ColorTranslator.FromHtml("#E0E0E0");
         }
-        public string ConnectionString = "Server=localhost;Database=OEAMS;Uid=root;pwd=Hamed#51234";
+        public string ConnectionString = "Server=localhost;Database=OEAMS;Uid=root;pwd=1234567890";
 
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
@@ -67,6 +68,10 @@ namespace LoginForm
                                 insertStd.Parameters.AddWithValue("@password", txbPassword.Text);
                                 object studentstInserted = insertStd.ExecuteNonQuery();
                             }
+                            MessageBox.Show("You are added successfully, now you can sign in");
+                            StudentLogin loginForm = new StudentLogin();
+                            loginForm.Show();
+                            this.Hide();
                         }
                     }
 
